@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>300-Hour Advanced Yoga Teacher Training | Rod Stryker</title>
+    <meta name="description" content="A rigorous, methodical 300-hour online yoga teacher training for serious practitioners. Deepen your mastery with Rod Stryker.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: {
+                            50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4',
+                            300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c',
+                            600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917',
+                        },
+                        sage: {
+                            50: '#f6f7f4', 100: '#e8ebe4', 200: '#d5dbd0',
+                            300: '#b8c4b0', 500: '#7c8b6f', 700: '#4a5542',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Comparison Table */
+        .col-highlight { background-color: #d5dbd0; }
+        .col-highlight-header { background-color: #4a5542; color: #fff; }
+
+        /* SMS bubbles */
+        .sms-bubble-received {
+            background: #e5e5ea;
+            border-radius: 18px 18px 18px 4px;
+            color: #1c1917;
+        }
+        .sms-bubble-sent {
+            background: #34c759;
+            border-radius: 18px 18px 4px 18px;
+            color: #fff;
+        }
+
+        /* Email card */
+        .email-card { border: 1px solid #e7e5e4; }
+        .email-header { background: #f5f5f4; border-bottom: 1px solid #e7e5e4; }
+
+        /* Accordion */
+        .accordion-content { display: none; }
+        .accordion-content.open { display: block; }
+    </style>
+</head>
+<body class="font-sans text-stone-700 bg-stone-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-stone-50/95 backdrop-blur-sm border-b border-stone-200 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <span class="font-serif text-2xl text-stone-800 tracking-wide">Rod Stryker</span>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#curriculum" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">Curriculum</a>
+                    <a href="#approach" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">Approach</a>
+                    <a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">About Rod</a>
+                    <a href="#preview" class="bg-stone-800 text-stone-50 px-6 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors">Get the Curriculum</a>
+                </div>
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6 text-stone-700"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-stone-50 border-b border-stone-200" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#curriculum" class="block py-2 text-stone-600">Curriculum</a>
+                <a href="#approach" class="block py-2 text-stone-600">Approach</a>
+                <a href="#about" class="block py-2 text-stone-600">About Rod</a>
+                <a href="#preview" class="block py-2 text-stone-800 font-medium">Get the Curriculum</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-stone-100 via-stone-50 to-sage-50 opacity-60"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="fade-in-section">
+                    <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">300-Hour Advanced Training</p>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-800 leading-tight mb-6">
+                        Advance Your Teaching Through <em class="italic text-sage-700">Depth,</em> Not Just Hours
+                    </h1>
+                    <p class="text-lg text-stone-600 leading-relaxed mb-8 max-w-xl">
+                        A methodical, rigorous training for 200-hour certified teachers seeking true mastery. Rooted in decades of yoga education and designed for serious practitioners ready to refine their craft.
+                    </p>
+                    
+                    <!-- Hero CTA — consistent form style -->
+                    <div class="bg-white p-6 rounded-sm shadow-sm border border-stone-200 mb-8">
+                        <p class="text-stone-800 font-medium mb-4 text-sm">Download the complete curriculum and experience a sample lecture</p>
+                        <form class="space-y-4" id="hero-form">
+                            <div>
+                                <label class="block text-xs font-medium text-stone-600 mb-1.5">Email Address</label>
+                                <input type="email" placeholder="your@email.com" required 
+                                    class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700 placeholder-stone-400 text-sm">
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-600 mb-1.5">First Name</label>
+                                    <input type="text" placeholder="First name" required
+                                        class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700 placeholder-stone-400 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-600 mb-1.5">Current Level of Certification</label>
+                                    <select class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 bg-white text-stone-700 text-xs">
+                                        <option value="" disabled selected>Select level</option>
+                                        <option>200-HR RYT (Registered)</option>
+                                        <option>200-HR Certified (Non-registered)</option>
+                                        <option>300-HR RYT</option>
+                                        <option>500-HR RYT</option>
+                                        <option>E-RYT 200</option>
+                                        <option>E-RYT 500</option>
+                                        <option>In a 200-HR Training Now</option>
+                                        <option>No Formal Certification Yet</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" 
+                                class="w-full bg-stone-800 text-white px-6 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors">
+                                Download Curriculum & Access Lecture
+                            </button>
+                        </form>
+                        <p class="text-xs text-stone-500 mt-3">Instant delivery. Unsubscribe anytime.</p>
+                    </div>
+
+                    <div class="flex items-center gap-4 text-sm text-stone-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-sage-600"></i>
+                            <span>Yoga Alliance Certified</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-sage-600"></i>
+                            <span>Self-paced over 12 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative fade-in-section">
+                    <div class="aspect-[4/5] bg-stone-200 rounded-sm overflow-hidden relative">
+                        <img src="https://static.photos/minimal/640x800/42" alt="Rod Stryker Teaching" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-900/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-lg max-w-xs hidden lg:block">
+                        <p class="font-serif text-xl text-stone-800 italic mb-2">"True teaching emerges from deep practice and deeper understanding."</p>
+                        <p class="text-sm text-stone-600">— Rod Stryker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- COMPARISON CHART — just below hero -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-stone-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-3">ParaYoga 300-HR is the only advanced training built for true mastery.</h2>
+                <p class="text-stone-500 text-sm max-w-xl mx-auto">How this program compares to the most popular alternatives.</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse bg-white shadow-sm rounded-sm overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th class="text-left px-6 py-5 text-stone-400 text-xs font-medium tracking-widest uppercase w-2/5 border-b border-stone-200"></th>
+                            <th class="px-4 py-5 col-highlight-header text-center w-[15%]">
+                                <span class="font-serif text-sm font-normal tracking-normal normal-case leading-tight">ParaYoga<br><span class="text-xs font-sans font-light tracking-widest uppercase opacity-80">300-HR</span></span>
+                            </th>
+                            <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">Yoga<br>Alliance<br>Generic</th>
+                            <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">Glo /<br>Wanderlust</th>
+                            <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">In-Person<br>Intensive</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-stone-100">
+                            <td class="px-6 py-4 text-stone-700">Sequential, progressive curriculum</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        </tr>
+                        <tr class="border-b border-stone-100 bg-stone-50/50">
+                            <td class="px-6 py-4 text-stone-700">Assessed competency (not just hours)</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        </tr>
+                        <tr class="border-b border-stone-100">
+                            <td class="px-6 py-4 text-stone-700">Self-paced (complete in 12 months)</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        </tr>
+                        <tr class="border-b border-stone-100 bg-stone-50/50">
+                            <td class="px-6 py-4 text-stone-700">Direct lineage from Himalayan tradition</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        </tr>
+                        <tr class="border-b border-stone-100">
+                            <td class="px-6 py-4 text-stone-700">Philosophy integrated into practice (not isolated)</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        </tr>
+                        <tr class="border-b border-stone-100 bg-stone-50/50">
+                            <td class="px-6 py-4 text-stone-700">Personal feedback on teaching practicums</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 text-stone-700">Yoga Alliance 500-HR eligible upon completion</td>
+                            <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                            <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                            <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIALS / SOCIAL PROOF — moved up, expanded styles -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">From Those Who've Done the Work</h2>
+                <p class="text-stone-500 text-sm">Unsolicited feedback from teachers across levels and backgrounds.</p>
+            </div>
+            
+            <!-- Row 1 -->
+            <div class="grid md:grid-cols-3 gap-8 fade-in-section">
+                <!-- Standard review card -->
+                <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">
+                        "I was skeptical about an online 300-hour program. But the structure created a different kind of depth. The assessments forced me to actually integrate the material rather than just show up and observe."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://static.photos/people/200x200/12" alt="Sarah Chen" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div>
+                            <p class="font-medium text-stone-800 text-sm">Sarah Chen</p>
+                            <p class="text-xs text-stone-500">Studio Owner · Portland, OR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMS / Text message thread -->
+                <div class="bg-stone-50 rounded-sm border border-stone-200 shadow-sm overflow-hidden flex flex-col">
+                    <div class="bg-stone-100 px-5 py-3 border-b border-stone-200 flex items-center gap-3">
+                        <div class="w-8 h-8 bg-stone-300 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="user" class="w-4 h-4 text-stone-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-stone-800">Michael Torres</p>
+                            <p class="text-xs text-stone-500">Vinyasa Teacher · Austin, TX</p>
+                        </div>
+                        <div class="ml-auto flex items-center gap-1">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-stone-400"></i>
+                            <span class="text-xs text-stone-400">iMessage</span>
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-3 flex-1">
+                        <div class="flex justify-start">
+                            <div class="sms-bubble-received px-4 py-2.5 max-w-[85%] text-sm leading-relaxed">
+                                Just finished Module 5 last night. The sequencing framework is unlike anything I've encountered in 8 years of teaching.
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="sms-bubble-sent px-4 py-2.5 max-w-[85%] text-sm leading-relaxed">
+                                What changed most in your actual teaching?
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="sms-bubble-received px-4 py-2.5 max-w-[85%] text-sm leading-relaxed">
+                                I finally understand how to build toward peak poses <em>energetically</em>, not just physically. My students have noticed — classes feel more cohesive.
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="sms-bubble-received px-4 py-2.5 max-w-[85%] text-sm leading-relaxed">
+                                Rigor was demanding but completely necessary. Worth every hour.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-3 pt-1 border-t border-stone-200">
+                        <p class="text-xs text-stone-400 text-center">Shared with permission</p>
+                    </div>
+                </div>
+
+                <!-- Standard review card -->
+                <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">
+                        "Coming from an Anusara background, I was particular about lineage and depth. Rod's approach respected the tradition without being esoteric. Essays came back with detailed feedback—not just pass/fail."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://static.photos/people/200x200/67" alt="Emma Richardson" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div>
+                            <p class="font-medium text-stone-800 text-sm">Emma Richardson</p>
+                            <p class="text-xs text-stone-500">Advanced Teacher · Denver, CO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid md:grid-cols-3 gap-8 mt-8 fade-in-section">
+
+                <!-- Email card -->
+                <div class="email-card rounded-sm overflow-hidden shadow-sm flex flex-col">
+                    <div class="email-header px-5 py-3.5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="mail" class="w-3.5 h-3.5 text-stone-500"></i>
+                            <span class="text-xs font-medium text-stone-500 tracking-wide uppercase">Email</span>
+                        </div>
+                        <div class="space-y-0.5">
+                            <p class="text-xs text-stone-600"><span class="font-medium text-stone-700">From:</span> Priya Nair &lt;priya@[redacted]&gt;</p>
+                            <p class="text-xs text-stone-600"><span class="font-medium text-stone-700">To:</span> ParaYoga Training Team</p>
+                            <p class="text-xs text-stone-600"><span class="font-medium text-stone-700">Subject:</span> Re: Module 3 Reflection Submission</p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-4 text-sm text-stone-700 leading-relaxed flex-1 bg-white">
+                        <p class="mb-3">I submitted my Module 3 reflection yesterday and just wanted to say thank you for the feedback structure you've built into this program.</p>
+                        <p class="mb-3">The detailed written response I received on my essay—not just a grade—genuinely changed how I'm approaching the Sutras. I've completed two other advanced trainings and never received anything close to this level of engagement.</p>
+                        <p>This is what serious education looks like.</p>
+                        <p class="mt-3 text-stone-500 text-xs">— Priya N., E-RYT 200</p>
+                    </div>
+                    <div class="px-5 py-2 bg-stone-50 border-t border-stone-200">
+                        <p class="text-xs text-stone-400">Shared with permission · Name & email partially redacted</p>
+                    </div>
+                </div>
+
+                <!-- Standard review card -->
+                <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">
+                        "I've taught for 12 years and genuinely thought a 300-hour online training couldn't challenge me. I was wrong. The pranayama module alone contained material sourced from primary texts—not watered-down summaries."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://static.photos/people/200x200/29" alt="David Okafor" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div>
+                            <p class="font-medium text-stone-800 text-sm">David Okafor</p>
+                            <p class="text-xs text-stone-500">E-RYT 500 · Chicago, IL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard review card -->
+                <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                    </div>
+                    <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">
+                        "The 12-month pacing is intentional, not just convenient. By the time I reached Module 6 I had actually practiced and internalized what I learned in Module 1. That integration simply doesn't happen in a 30-day intensive."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://static.photos/people/200x200/53" alt="Leila Farouk" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div>
+                            <p class="font-medium text-stone-800 text-sm">Leila Farouk</p>
+                            <p class="text-xs text-stone-500">Teacher Trainer · London, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-6">Most Online Advanced Trainings Leave Teachers Where They Started</h2>
+            <p class="text-lg text-stone-600 leading-relaxed mb-12 max-w-2xl mx-auto">
+                The marketplace is saturated with fragmented content—disconnected videos, surface-level philosophy, and no real assessment of competency. Teachers invest thousands of hours and dollars, yet finish without the confidence or depth they sought.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="p-6 border-l-2 border-stone-200">
+                    <i data-lucide="shuffle" class="w-6 h-6 text-stone-400 mb-4"></i>
+                    <h3 class="font-serif text-xl text-stone-800 mb-2">Fragmented Content</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Random workshops strung together without pedagogical progression or integration.</p>
+                </div>
+                <div class="p-6 border-l-2 border-stone-200">
+                    <i data-lucide="eye-off" class="w-6 h-6 text-stone-400 mb-4"></i>
+                    <h3 class="font-serif text-xl text-stone-800 mb-2">Passive Consumption</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Watching videos without assessment, feedback, or verified competency in teaching skills.</p>
+                </div>
+                <div class="p-6 border-l-2 border-stone-200">
+                    <i data-lucide="layers" class="w-6 h-6 text-stone-400 mb-4"></i>
+                    <h3 class="font-serif text-xl text-stone-800 mb-2">Surface Philosophy</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Ancient wisdom reduced to inspirational quotes rather than rigorous study and application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution / Positioning -->
+    <section class="py-20 bg-white" id="approach">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center fade-in-section">
+                <div class="order-2 lg:order-1">
+                    <img src="https://static.photos/workspace/640x800/88" alt="Study and Practice" class="w-full rounded-sm shadow-sm grayscale">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">A Different Standard</p>
+                    <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-6">Methodical, Structured, and Rooted in Mastery</h2>
+                    <p class="text-stone-600 leading-relaxed mb-6">
+                        This training was built differently. As a founding member of the Yoga Alliance Standards Committee and creator of ParaYoga, Rod Stryker has shaped modern yoga education. This 300-hour program reflects that legacy: sequential, assessed, and integrated.
+                    </p>
+                    <p class="text-stone-600 leading-relaxed mb-8">
+                        Every module builds upon the last. Every lecture connects philosophy to practice. Every assessment verifies your understanding before you advance. This is not content to consume—it is a methodology to embody.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-sage-600 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-medium text-stone-800">Yoga Alliance Standards Architect</p>
+                                <p class="text-sm text-stone-600">Rod helped define what advanced teacher training means</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="book-open" class="w-5 h-5 text-sage-600 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <p class="font-medium text-stone-800">40+ Years of Lineage</p>
+                                <p class="text-sm text-stone-600">Direct transmission from master teachers, refined through decades of practice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiation Pillars -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">The Architecture of Mastery</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">Five structural elements that distinguish rigorous education from passive content consumption.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in-section">
+                <div class="p-8 bg-white hover:shadow-lg transition-all duration-300 border border-stone-100">
+                    <div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="git-commit" class="w-6 h-6 text-sage-700"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-stone-800 mb-3">Sequential Mastery</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Curriculum designed as a progressive journey. Each module unlocks only after demonstrated competency.</p>
+                </div>
+                <div class="p-8 bg-white hover:shadow-lg transition-all duration-300 border border-stone-100">
+                    <div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="clipboard-check" class="w-6 h-6 text-sage-700"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-stone-800 mb-3">Assessed Competency</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Written reflections, teaching practicums, and philosophical essays ensure you're integrating knowledge.</p>
+                </div>
+                <div class="p-8 bg-white hover:shadow-lg transition-all duration-300 border border-stone-100">
+                    <div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="link" class="w-6 h-6 text-sage-700"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-stone-800 mb-3">Integrated Wisdom</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Philosophy, pranayama, asana, and meditation taught as interconnected disciplines, not isolated subjects.</p>
+                </div>
+                <div class="p-8 bg-white hover:shadow-lg transition-all duration-300 border border-stone-100">
+                    <div class="w-12 h-12 bg-sage-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-6 h-6 text-sage-700"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-stone-800 mb-3">Pedagogical Rigor</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Focus on the art of teaching: sequencing for specific outcomes, holding space, adjusting, and verbal precision.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="py-20 bg-white" id="curriculum">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">Curriculum Overview</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">Six Modules. Progressive Depth.</h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">A carefully sequenced journey from subtle body mastery to advanced teaching methodology.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-section">
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 1</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">The Subtle Body</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Deep dive into prana, nadis, koshas, and the energetic architecture of practice.</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 2</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">Advanced Pranayama</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Systematic progression through classical techniques, breath retention, and bandha integration.</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 3</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">Meditation & Mind</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Study of Patanjali's Yoga Sutra with practical application. Teaching meditation across diverse populations.</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 4</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">Philosophy in Practice</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Integrating Samkhya, Tantra, and Vedanta into contemporary teaching without dilution.</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 5</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">Sequencing Mastery</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Advanced vinyasa krama for energetic outcomes, peak pose preparation, and seasonal sequencing.</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-sm border border-stone-200 hover:border-sage-300 transition-colors">
+                    <span class="text-sage-600 text-sm font-medium tracking-widest">MODULE 6</span>
+                    <h3 class="font-serif text-2xl text-stone-800 mt-2 mb-3">The Art of Teaching</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Voice, presence, demonstration, adjustment ethics, and holding space for transformation.</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-stone-500 text-sm">Full syllabus, reading list, and assessment criteria included in curriculum download.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 fade-in-section">
+                <div class="p-8 bg-sage-50 border border-sage-100 rounded-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="check" class="w-6 h-6 text-sage-700"></i>
+                        <h3 class="font-serif text-2xl text-stone-800">This Is For</h3>
+                    </div>
+                    <ul class="space-y-4 text-stone-700">
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>200-hour certified teachers seeking deeper mastery</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Serious practitioners ready to teach at an advanced level</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Teachers who value structure, rigor, and lineage</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Those willing to commit 12 months to methodical study</span></li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-stone-100 border border-stone-200 rounded-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="x" class="w-6 h-6 text-stone-500"></i>
+                        <h3 class="font-serif text-2xl text-stone-800">This Is Not For</h3>
+                    </div>
+                    <ul class="space-y-4 text-stone-600">
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Beginners or those without a 200-hour foundation</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Those seeking quick certification or surface-level content</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Casual practitioners not planning to teach</span></li>
+                        <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Those unable to dedicate 8-10 hours weekly to study</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority -->
+    <section class="py-20 bg-stone-800 text-stone-100" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center fade-in-section">
+                <div>
+                    <img src="https://static.photos/people/640x800/33" alt="Rod Stryker Portrait" class="w-full rounded-sm opacity-90 grayscale">
+                </div>
+                <div>
+                    <p class="text-sage-300 text-sm tracking-widest uppercase mb-4 font-medium">Your Teacher</p>
+                    <h2 class="font-serif text-3xl md:text-4xl mb-6">Rod Stryker</h2>
+                    <p class="text-stone-300 text-lg leading-relaxed mb-6">
+                        Founder of ParaYoga, Rod is one of the preeminent yoga and meditation teachers in the United States. He has spent more than four decades practicing and teaching, studying directly with master teachers in the Himalayas and India.
+                    </p>
+                    <p class="text-stone-300 leading-relaxed mb-6">
+                        As a founding member of the Yoga Alliance Standards Committee, Rod helped establish the criteria for what constitutes rigorous teacher training. He is the author of <em>The Four Desires</em> and has trained thousands of teachers worldwide.
+                    </p>
+                    <p class="text-stone-300 leading-relaxed mb-8">
+                        This 300-hour training represents his life's work: distilling complex philosophical traditions into accessible, rigorous, transformative education.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6 border-t border-stone-700 pt-8">
+                        <div><p class="font-serif text-3xl text-sage-300">40+</p><p class="text-sm text-stone-400 mt-1">Years Teaching</p></div>
+                        <div><p class="font-serif text-3xl text-sage-300">10k+</p><p class="text-sm text-stone-400 mt-1">Teachers Trained</p></div>
+                        <div><p class="font-serif text-3xl text-sage-300">5</p><p class="text-sm text-stone-400 mt-1">Books Published</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Preview -->
+    <section class="py-20 bg-sage-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <i data-lucide="play-circle" class="w-8 h-8 text-sage-700"></i>
+            </div>
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">Experience the Depth Firsthand</h2>
+            <p class="text-lg text-stone-600 leading-relaxed mb-8">
+                Before committing, immerse yourself in a sample lecture from Module 3: <em>The Science of Meditation</em>.
+            </p>
+            <div class="bg-white p-2 rounded-sm shadow-sm max-w-2xl mx-auto mb-8">
+                <div class="aspect-video bg-stone-200 rounded-sm flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                    <img src="https://static.photos/minimal/1024x576/77" alt="Sample Lecture Preview" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="w-8 h-8 text-stone-800 ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-stone-500">45-minute lecture • Includes downloadable study guide</p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PRIMARY LEAD MAGNET — consistent CTA form -->
+    <!-- ============================================================ -->
+    <section class="py-24 bg-white border-t border-stone-200" id="preview">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+            <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">Begin Your Evaluation</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-stone-800 mb-6">Explore the Full Curriculum &<br>Experience a Sample Lecture</h2>
+            <p class="text-lg text-stone-600 leading-relaxed mb-12 max-w-2xl mx-auto">
+                Download the complete syllabus, module breakdowns, reading list, and assessment criteria—plus immediate access to a full 45-minute lecture.
+            </p>
+            
+            <div class="bg-stone-50 p-8 md:p-12 rounded-sm border border-stone-200 max-w-2xl mx-auto text-left">
+                <form id="main-lead-form" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">Email Address</label>
+                        <input type="email" required 
+                            class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 focus:ring-1 focus:ring-sage-500 text-stone-700"
+                            placeholder="your@email.com">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-2">First Name</label>
+                            <input type="text" required 
+                                class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700"
+                                placeholder="First name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-2">Current Level of Certification</label>
+                            <select class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 bg-white text-stone-700 text-sm">
+                                <option value="" disabled selected>Select your level</option>
+                                <option>200-HR RYT (Registered)</option>
+                                <option>200-HR Certified (Non-registered)</option>
+                                <option>300-HR RYT</option>
+                                <option>500-HR RYT</option>
+                                <option>E-RYT 200</option>
+                                <option>E-RYT 500</option>
+                                <option>In a 200-HR Training Now</option>
+                                <option>No Formal Certification Yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" 
+                            class="w-full bg-stone-800 text-white py-4 text-base tracking-wide hover:bg-stone-700 transition-colors rounded-sm shadow-sm">
+                            Download Curriculum & Access Lecture
+                        </button>
+                    </div>
+                    <p class="text-xs text-stone-500 text-center">
+                        We respect your privacy. Unsubscribe at any time. By downloading, you agree to receive occasional updates about the training.
+                    </p>
+                </form>
+                
+                <div class="mt-8 pt-8 border-t border-stone-200 grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <i data-lucide="file-text" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i>
+                        <p class="text-xs text-stone-600">Complete Syllabus</p>
+                    </div>
+                    <div>
+                        <i data-lucide="video" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i>
+                        <p class="text-xs text-stone-600">45-min Lecture</p>
+                    </div>
+                    <div>
+                        <i data-lucide="book-marked" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i>
+                        <p class="text-xs text-stone-600">Reading List</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objections -->
+    <section class="py-20 bg-stone-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-12 text-center">Common Considerations</h2>
+            <div class="space-y-4">
+                <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                    <button class="flex justify-between items-center w-full text-left accordion-btn">
+                        <span class="font-serif text-xl text-stone-800">Can online training truly provide the depth of in-person immersion?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content mt-4 text-stone-600 leading-relaxed">
+                        <p>Depth is not determined by physical proximity but by structure, accountability, and content rigor. This program employs a sequential, assessed model that often creates deeper integration than passive attendance at in-person trainings. Daily practice logs, written reflections, and teaching submissions ensure the material is embodied, not just observed. The format also allows for 12 months of assimilation rather than 30 days of overwhelm.</p>
+                    </div>
+                </div>
+                <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                    <button class="flex justify-between items-center w-full text-left accordion-btn">
+                        <span class="font-serif text-xl text-stone-800">How does this compare to less expensive online options?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content mt-4 text-stone-600 leading-relaxed">
+                        <p>Most affordable trainings offer video libraries without assessment, lineage, or pedagogical structure. This program provides: (1) A cumulative curriculum where each module builds systematically, (2) Personal feedback on teaching practicums and written work, (3) Direct transmission from a teacher with 40+ years of Himalayan lineage, and (4) Yoga Alliance 500-HR eligibility. The value lies in the outcome: true teaching competency.</p>
+                    </div>
+                </div>
+                <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                    <button class="flex justify-between items-center w-full text-left accordion-btn">
+                        <span class="font-serif text-xl text-stone-800">What is the time commitment required?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content mt-4 text-stone-600 leading-relaxed">
+                        <p>The program is designed to be completed over 12 months, requiring approximately 8-10 hours weekly. This includes lecture viewing, reading, personal practice, and written work. It is structured to accommodate working teachers—you can view lectures asynchronously, though live Q&A sessions are offered monthly.</p>
+                    </div>
+                </div>
+                <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                    <button class="flex justify-between items-center w-full text-left accordion-btn">
+                        <span class="font-serif text-xl text-stone-800">Is this certification recognized internationally?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content mt-4 text-stone-600 leading-relaxed">
+                        <p>Upon completion, you receive a 300-hour certificate from ParaYoga, qualifying you for the 500-hour RYT designation through Yoga Alliance (assuming you hold a 200-hour RYT). Rod Stryker's involvement in establishing Yoga Alliance standards ensures this certification is recognized globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-stone-800 text-stone-100">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+            <div class="text-center mb-10">
+                <h2 class="font-serif text-3xl md:text-4xl mb-4">Begin With the Curriculum</h2>
+                <p class="text-stone-300 text-lg leading-relaxed">
+                    Evaluate the depth, structure, and teaching style before making your decision. Download the full syllabus and experience a sample lecture from Module 3.
+                </p>
+            </div>
+            <div class="bg-stone-700/50 border border-stone-600 p-8 rounded-sm">
+                <form id="footer-lead-form" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-300 mb-2">Email Address</label>
+                        <input type="email" required
+                            class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-100 placeholder-stone-500"
+                            placeholder="your@email.com">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-stone-300 mb-2">First Name</label>
+                            <input type="text" required
+                                class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-100 placeholder-stone-500"
+                                placeholder="First name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-stone-300 mb-2">Current Level of Certification</label>
+                            <select class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-300 text-sm">
+                                <option value="" disabled selected>Select level</option>
+                                <option>200-HR RYT (Registered)</option>
+                                <option>200-HR Certified (Non-registered)</option>
+                                <option>300-HR RYT</option>
+                                <option>500-HR RYT</option>
+                                <option>E-RYT 200</option>
+                                <option>E-RYT 500</option>
+                                <option>In a 200-HR Training Now</option>
+                                <option>No Formal Certification Yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-sage-300 text-stone-900 py-4 text-base tracking-wide hover:bg-white transition-colors rounded-sm font-medium mt-2">
+                        Get the Curriculum & Lecture
+                    </button>
+                    <p class="text-xs text-stone-500 text-center">No obligation. Instant access to materials.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <span class="font-serif text-2xl text-stone-200 tracking-wide block mb-4">Rod Stryker</span>
+                    <p class="text-sm leading-relaxed max-w-sm">Advanced yoga and meditation training for serious practitioners. Methodical, rigorous, and rooted in the Himalayan traditions.</p>
+                </div>
+                <div>
+                    <h4 class="text-stone-200 font-medium mb-4 text-sm tracking-widest uppercase">Program</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#curriculum" class="hover:text-stone-200 transition-colors">Curriculum</a></li>
+                        <li><a href="#about" class="hover:text-stone-200 transition-colors">About Rod</a></li>
+                        <li><a href="#" class="hover:text-stone-200 transition-colors">Schedule a Call</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-stone-200 font-medium mb-4 text-sm tracking-widest uppercase">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-200 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-stone-200 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-200 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs">© 2025 Rod Stryker / ParaYoga. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Accordion
+        document.querySelectorAll('.accordion-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.accordion-icon');
+                const isOpen = content.classList.contains('open');
+
+                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                document.querySelectorAll('.accordion-icon').forEach(i => i.setAttribute('data-lucide', 'plus'));
+                lucide.createIcons();
+
+                if (!isOpen) {
+                    content.classList.add('open');
+                    icon.setAttribute('data-lucide', 'minus');
+                    lucide.createIcons();
+                }
+            });
+        });
+
+        // Fade-in observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
+
+        // Forms
+        ['hero-form', 'main-lead-form', 'footer-lead-form'].forEach(id => {
+            const form = document.getElementById(id);
+            if (form) form.addEventListener('submit', e => {
+                e.preventDefault();
+                alert('Thank you! Check your email for the curriculum and sample lecture.');
+            });
+        });
+
+        // Navbar scroll shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('shadow-sm', window.pageYOffset > 100);
+        });
+    </script>
+</body>
+</html>
