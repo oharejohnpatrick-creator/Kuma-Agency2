@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Yoga Modules | Rod Stryker — Tantra Yoga Alchemy</title>
+    <meta name="description" content="Deepen one specific skill. Fulfill your continuing education credits. Eight standalone online modules taught by Rod Stryker—study what matters most to you.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        stone: { 50:'#fafaf9',100:'#f5f5f4',200:'#e7e5e4',300:'#d6d3d1',400:'#a8a29e',500:'#78716c',600:'#57534e',700:'#44403c',800:'#292524',900:'#1c1917' },
+                        sage:  { 50:'#f6f7f4',100:'#e8ebe4',200:'#d5dbd0',300:'#b8c4b0',500:'#7c8b6f',700:'#4a5542' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-section { opacity:0; transform:translateY(20px); transition:opacity .8s ease-out,transform .8s ease-out; }
+        .fade-in-section.is-visible { opacity:1; transform:translateY(0); }
+        .col-highlight { background-color:#d5dbd0; }
+        .col-highlight-header { background-color:#4a5542; color:#fff; }
+        .accordion-content { display:none; }
+        .accordion-content.open { display:block; }
+        .module-card { transition: border-color 0.2s, box-shadow 0.2s; }
+        .module-card:hover { border-color: #b8c4b0; box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+        .ceu-badge { background: linear-gradient(135deg, #4a5542 0%, #7c8b6f 100%); }
+    </style>
+</head>
+<body class="font-sans text-stone-700 bg-stone-50 antialiased">
+
+<!-- Navigation -->
+<nav class="fixed w-full bg-stone-50/95 backdrop-blur-sm border-b border-stone-200 z-50" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <span class="font-serif text-2xl text-stone-800 tracking-wide">Rod Stryker</span>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#modules" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">Modules</a>
+                <a href="#ceu" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">CEU Credits</a>
+                <a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors text-sm tracking-wide">About Rod</a>
+                <a href="#find-your-module" class="bg-stone-800 text-stone-50 px-6 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors">Find Your Module</a>
+            </div>
+            <button class="md:hidden p-2" id="mobile-menu-btn"><i data-lucide="menu" class="w-6 h-6 text-stone-700"></i></button>
+        </div>
+    </div>
+    <div class="hidden md:hidden bg-stone-50 border-b border-stone-200" id="mobile-menu">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+            <a href="#modules" class="block py-2 text-stone-600">Modules</a>
+            <a href="#ceu" class="block py-2 text-stone-600">CEU Credits</a>
+            <a href="#about" class="block py-2 text-stone-600">About Rod</a>
+            <a href="#find-your-module" class="block py-2 text-stone-800 font-medium">Find Your Module</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-stone-100 via-stone-50 to-sage-50 opacity-60"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="fade-in-section">
+                <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">Individual Online Modules</p>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-stone-800 leading-tight mb-6">
+                    Go Deeper in the<br><em class="italic text-sage-700">One Area</em> That<br>Matters Most
+                </h1>
+                <p class="text-lg text-stone-600 leading-relaxed mb-8 max-w-xl">
+                    Eight standalone 40-hour modules from Rod Stryker's world-class Tantra Yoga Alchemy curriculum. Study Yoga Nidra, Pranayama, Sequencing, Philosophy, and more — each module eligible for Yoga Alliance continuing education credits.
+                </p>
+                <!-- Hero Lead Magnet Form -->
+                <div class="bg-white p-6 rounded-sm shadow-sm border border-stone-200 mb-8">
+                    <p class="text-stone-800 font-medium mb-1 text-sm">Not sure which module is right for you?</p>
+                    <p class="text-stone-500 text-xs mb-4">Enter your details and receive a free sample lecture + module guide to help you choose.</p>
+                    <form class="space-y-4" id="hero-form">
+                        <div>
+                            <label class="block text-xs font-medium text-stone-600 mb-1.5">Email Address</label>
+                            <input type="email" placeholder="your@email.com" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700 placeholder-stone-400 text-sm">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-medium text-stone-600 mb-1.5">First Name</label>
+                                <input type="text" placeholder="First name" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700 placeholder-stone-400 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-stone-600 mb-1.5">Last Name</label>
+                                <input type="text" placeholder="Last name" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700 placeholder-stone-400 text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-stone-600 mb-1.5">Which topic interests you most?</label>
+                            <select class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 bg-white text-stone-700 text-sm">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option>Yoga Nidra & Meditation</option>
+                                <option>Pranayama & Breathwork</option>
+                                <option>Advanced Sequencing</option>
+                                <option>Yoga Philosophy</option>
+                                <option>The Subtle Body & Energetics</option>
+                                <option>Tantra & Himalayan Tradition</option>
+                                <option>Teaching Methodology</option>
+                                <option>Continuing Education Credits (CEU)</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-stone-800 text-white px-6 py-3 text-sm tracking-wide hover:bg-stone-700 transition-colors">
+                            Send Me the Free Module Guide
+                        </button>
+                    </form>
+                    <p class="text-xs text-stone-500 mt-3">Instant delivery. No obligation. Unsubscribe anytime.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-sm text-stone-500">
+                    <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-sage-600"></i><span>Yoga Alliance CEU Eligible</span></div>
+                    <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-sage-600"></i><span>40 hours per module</span></div>
+                    <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-sage-600"></i><span>Self-paced online</span></div>
+                </div>
+            </div>
+            <div class="relative fade-in-section">
+                <div class="aspect-[4/5] bg-stone-200 rounded-sm overflow-hidden relative">
+                    <img src="https://static.photos/minimal/640x800/55" alt="Rod Stryker Teaching" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/20 to-transparent"></div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-lg max-w-xs hidden lg:block">
+                    <p class="font-serif text-xl text-stone-800 italic mb-2">"One module, practiced deeply, will change how you teach forever."</p>
+                    <p class="text-sm text-stone-600">— Rod Stryker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CEU BANNER -->
+<section class="py-12 bg-stone-800" id="ceu">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <p class="text-sage-300 text-sm tracking-widest uppercase mb-3 font-medium">Continuing Education</p>
+                <h2 class="font-serif text-3xl text-stone-100 mb-4">Every Module Counts Toward Your 45-Hour CEU Requirement</h2>
+                <p class="text-stone-300 leading-relaxed">Yoga Alliance registered teachers must complete 45 hours of continuing education every three years. Each 40-hour Rod Stryker module fulfills the bulk of that requirement — while giving you depth in a specific skill you actually want to develop.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-stone-700/50 border border-stone-600 p-5 rounded-sm text-center">
+                    <p class="font-serif text-4xl text-sage-300 mb-1">40</p>
+                    <p class="text-stone-400 text-sm">Hours per module</p>
+                </div>
+                <div class="bg-stone-700/50 border border-stone-600 p-5 rounded-sm text-center">
+                    <p class="font-serif text-4xl text-sage-300 mb-1">45</p>
+                    <p class="text-stone-400 text-sm">CEUs required per 3 years</p>
+                </div>
+                <div class="bg-stone-700/50 border border-stone-600 p-5 rounded-sm text-center">
+                    <p class="font-serif text-4xl text-sage-300 mb-1">8</p>
+                    <p class="text-stone-400 text-sm">Modules available</p>
+                </div>
+                <div class="bg-stone-700/50 border border-stone-600 p-5 rounded-sm text-center">
+                    <p class="font-serif text-4xl text-sage-300 mb-1">YA</p>
+                    <p class="text-stone-400 text-sm">Registered provider</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem -->
+<section class="py-20 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-6">Most Continuing Education Gives You Hours. Not Understanding.</h2>
+        <p class="text-lg text-stone-600 leading-relaxed mb-12 max-w-2xl mx-auto">The yoga world is full of workshops that check the CEU box — and leave teachers exactly where they started. Generic content. No lineage. No real depth. You finish the hours and still feel uncertain about the very topic you came to master.</p>
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="p-6 border-l-2 border-stone-200"><i data-lucide="layers" class="w-6 h-6 text-stone-400 mb-4"></i><h3 class="font-serif text-xl text-stone-800 mb-2">Generic Content</h3><p class="text-stone-600 text-sm leading-relaxed">Surface-level workshops designed to appeal to everyone — and therefore depth for no one.</p></div>
+            <div class="p-6 border-l-2 border-stone-200"><i data-lucide="link-2-off" class="w-6 h-6 text-stone-400 mb-4"></i><h3 class="font-serif text-xl text-stone-800 mb-2">No Through-Line</h3><p class="text-stone-600 text-sm leading-relaxed">Disconnected videos or weekend intensives with no coherent pedagogical arc from start to finish.</p></div>
+            <div class="p-6 border-l-2 border-stone-200"><i data-lucide="graduation-cap" class="w-6 h-6 text-stone-400 mb-4"></i><h3 class="font-serif text-xl text-stone-800 mb-2">No Verified Mastery</h3><p class="text-stone-600 text-sm leading-relaxed">Hours logged, certificate issued — but no evidence you've actually integrated the material.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution -->
+<section class="py-20 bg-white" id="approach">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center fade-in-section">
+            <div class="order-2 lg:order-1"><img src="https://static.photos/workspace/640x800/14" alt="Study and Practice" class="w-full rounded-sm shadow-sm grayscale"></div>
+            <div class="order-1 lg:order-2">
+                <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">A Different Standard</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-6">40 Hours of Real Depth in a Single Subject</h2>
+                <p class="text-stone-600 leading-relaxed mb-6">Each module is a complete, rigorous course — not a highlights reel. Rod Stryker's approach draws on 40+ years of study in the Himalayan tradition to give you the roots, not just the branches, of any topic you choose.</p>
+                <p class="text-stone-600 leading-relaxed mb-8">Every module includes video lectures, primary text readings, written reflections, and a teaching practicum — so you don't just absorb information, you integrate it into your practice and your classroom.</p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-sage-600 mt-0.5 flex-shrink-0"></i><div><p class="font-medium text-stone-800">Deep, Coherent Curriculum</p><p class="text-sm text-stone-600">Each module progresses logically — not a playlist of videos but a structured arc of learning</p></div></div>
+                    <div class="flex items-start gap-3"><i data-lucide="book-open" class="w-5 h-5 text-sage-600 mt-0.5 flex-shrink-0"></i><div><p class="font-medium text-stone-800">Direct Himalayan Lineage</p><p class="text-sm text-stone-600">Transmitted from master teachers through Rod Stryker's 40+ years of practice</p></div></div>
+                    <div class="flex items-start gap-3"><i data-lucide="clipboard-check" class="w-5 h-5 text-sage-600 mt-0.5 flex-shrink-0"></i><div><p class="font-medium text-stone-800">Assessed, Not Just Logged</p><p class="text-sm text-stone-600">Written reflections and teaching practicums confirm you've truly integrated the material</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODULE CARDS -->
+<section class="py-20 bg-stone-50" id="modules">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-section">
+            <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">The Eight Modules</p>
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">Choose the Depth You Need</h2>
+            <p class="text-stone-600 max-w-2xl mx-auto">Each module stands completely on its own. Take one. Take several. Or complete all eight to earn your 300-hour certification.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 fade-in-section" id="modules-grid">
+
+            <!-- Module 1 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 1 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">The Subtle Body & Energetics</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">Master prana, nadis, chakras, and the koshas — the energetic architecture underlying all yoga practice. Learn to teach and sequence with the subtle body as your map, not just anatomy.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>12 video lectures · 8–10 hrs of reading</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Written reflection + teaching practicum</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 2 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Advanced Pranayama</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">A systematic, classical progression through breathwork — from foundational techniques to advanced retention and bandha integration. One of the most requested modules among experienced teachers.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>14 video lectures · Guided practice sessions</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Written reflection + teaching practicum</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 3 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Meditation & the Science of Mind</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">In-depth study of Patanjali's Yoga Sutras with direct application to teaching meditation across diverse student populations. Learn to guide, not just demonstrate.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>13 video lectures · Primary text readings</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Essay submission + meditation practicum</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 4 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Philosophy in Practice</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">Samkhya, Tantra, and Vedanta integrated into contemporary teaching without dilution or distortion. Stop mentioning philosophy and start teaching it with clarity and confidence.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>11 video lectures · Extensive reading list</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Philosophical essay + class integration project</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 5 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Advanced Sequencing & Vinyasa Krama</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">The most popular module among practicing teachers. Learn to sequence for specific energetic outcomes — peak poses, seasonal themes, and the arc of transformation — not just anatomical progression.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>15 video lectures · Sample sequence library</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Original sequence submission + critique</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 6 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">The Art of Teaching</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">Voice, presence, cueing, hands-on adjustment ethics, and the art of holding space for transformation. The module for teachers who know the practice — and want to become masterful at transmitting it.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>12 video lectures · Live teaching demos</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Video teaching submission + feedback</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 7 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 7 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Yoga Nidra</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">One of the most-searched skills in modern yoga education. Learn the authentic classical roots of Yoga Nidra, the science behind it, and how to guide sessions that create lasting transformation for your students.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>10 video lectures · Full guided practice recordings</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Original Yoga Nidra script submission</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="module-card bg-white border border-stone-200 rounded-sm p-8 flex flex-col">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="text-sage-600 text-xs font-medium tracking-widest uppercase">Module 8 · 40 Hours</span>
+                    <span class="ceu-badge text-white text-xs px-2 py-1 rounded-sm font-medium tracking-wide">CEU Eligible</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-800 mb-3">Tantra & the Himalayan Tradition</h3>
+                <p class="text-stone-600 text-sm leading-relaxed mb-5 flex-1">The foundational worldview underlying all of Rod's teachings — studied in depth. Understand the philosophical framework that makes this tradition unique, and how to bring it authentically into your teaching without distortion.</p>
+                <div class="border-t border-stone-100 pt-5 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="video" class="w-3.5 h-3.5 text-sage-600"></i><span>13 video lectures · Primary source texts</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="file-text" class="w-3.5 h-3.5 text-sage-600"></i><span>Philosophical essay + reflection journal</span></div>
+                    <div class="flex items-center gap-2 text-xs text-stone-500"><i data-lucide="award" class="w-3.5 h-3.5 text-sage-600"></i><span>Counts toward 300-HR certification</span></div>
+                </div>
+                <a href="#find-your-module" class="mt-6 inline-block text-center border border-stone-800 text-stone-800 px-5 py-2.5 text-sm tracking-wide hover:bg-stone-800 hover:text-white transition-colors">Get the Module Guide</a>
+            </div>
+
+        </div>
+
+        <!-- Upgrade nudge -->
+        <div class="mt-12 text-center fade-in-section">
+            <div class="inline-block bg-white border border-stone-200 rounded-sm px-8 py-6 max-w-xl">
+                <p class="text-stone-700 text-sm mb-1">Thinking about all eight?</p>
+                <p class="font-serif text-xl text-stone-800 mb-3">The complete 300-Hour Certification is available at a significant saving over individual modules.</p>
+                <a href="/index.html" target="_blank" class="text-sage-700 text-sm underline underline-offset-4 hover:text-stone-800 transition-colors">Learn about the 300-Hour Training →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="py-20 bg-stone-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="text-center mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-3">Not all CEU hours are equal.</h2>
+            <p class="text-stone-500 text-sm max-w-xl mx-auto">How Rod Stryker's individual modules compare to common alternatives.</p>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white shadow-sm rounded-sm overflow-hidden">
+                <thead>
+                    <tr>
+                        <th class="text-left px-6 py-5 text-stone-400 text-xs font-medium tracking-widest uppercase w-2/5 border-b border-stone-200"></th>
+                        <th class="px-4 py-5 col-highlight-header text-center w-[15%]">
+                            <span class="font-serif text-sm font-normal normal-case leading-snug">Rod Stryker<br>Individual<br><span class="text-xs font-sans font-light tracking-widest uppercase opacity-80">Module</span></span>
+                        </th>
+                        <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">Weekend<br>Workshop</th>
+                        <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">Online<br>Course<br>Platform</th>
+                        <th class="px-4 py-5 text-stone-500 text-xs font-medium tracking-widest uppercase text-center w-[15%] border-b border-stone-200">Generic<br>CEU<br>Provider</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <tr class="border-b border-stone-100">
+                        <td class="px-6 py-4 text-stone-700">40 hours of structured depth</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                    </tr>
+                    <tr class="border-b border-stone-100 bg-stone-50/50">
+                        <td class="px-6 py-4 text-stone-700">Yoga Alliance CEU eligible</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                    </tr>
+                    <tr class="border-b border-stone-100">
+                        <td class="px-6 py-4 text-stone-700">Himalayan lineage & primary sources</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                    </tr>
+                    <tr class="border-b border-stone-100 bg-stone-50/50">
+                        <td class="px-6 py-4 text-stone-700">Assessed competency (not just hours)</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                    </tr>
+                    <tr class="border-b border-stone-100">
+                        <td class="px-6 py-4 text-stone-700">Self-paced, online</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-stone-700">Counts toward 300-HR certification</td>
+                        <td class="col-highlight text-center py-4"><i data-lucide="check" class="w-5 h-5 text-sage-700 mx-auto stroke-2"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                        <td class="text-center py-4"><i data-lucide="x" class="w-5 h-5 text-stone-300 mx-auto"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in-section">
+            <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">From Teachers Who've Taken Individual Modules</h2>
+            <p class="text-stone-500 text-sm">Unsolicited feedback from practitioners across levels and backgrounds.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 fade-in-section">
+            <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                <div class="flex items-center gap-1 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                </div>
+                <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">"I took the Sequencing module to earn my CEU hours. Three months later, my students told me it felt like I'd become a completely different teacher. That's not what I expected from a CEU course."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0"><img src="https://static.photos/people/200x200/18" alt="Amara Jensen" class="w-full h-full object-cover grayscale"></div>
+                    <div><p class="font-medium text-stone-800 text-sm">Amara Jensen</p><p class="text-xs text-stone-500">E-RYT 200 · Seattle, WA</p></div>
+                </div>
+            </div>
+
+            <!-- SMS card -->
+            <div class="bg-stone-50 rounded-sm border border-stone-200 shadow-sm overflow-hidden flex flex-col">
+                <div class="bg-stone-100 px-5 py-3 border-b border-stone-200 flex items-center gap-3">
+                    <div class="w-8 h-8 bg-stone-300 rounded-full flex items-center justify-center flex-shrink-0"><i data-lucide="user" class="w-4 h-4 text-stone-500"></i></div>
+                    <div><p class="text-xs font-semibold text-stone-800">Claudia Reyes</p><p class="text-xs text-stone-500">Vinyasa Teacher · Barcelona, Spain</p></div>
+                    <div class="ml-auto flex items-center gap-1"><i data-lucide="message-circle" class="w-4 h-4 text-stone-400"></i><span class="text-xs text-stone-400">iMessage</span></div>
+                </div>
+                <div class="p-5 space-y-3 flex-1">
+                    <div class="flex justify-start"><div class="bg-stone-200 rounded-[18px_18px_18px_4px] px-4 py-2.5 max-w-[85%] text-sm leading-relaxed text-stone-800">Just finished the Yoga Nidra module. I've been trying to add this to my studio's offerings for 2 years.</div></div>
+                    <div class="flex justify-end"><div class="bg-[#34c759] rounded-[18px_18px_4px_18px] px-4 py-2.5 max-w-[85%] text-sm leading-relaxed text-white">Did it help you feel ready to actually teach it?</div></div>
+                    <div class="flex justify-start"><div class="bg-stone-200 rounded-[18px_18px_18px_4px] px-4 py-2.5 max-w-[85%] text-sm leading-relaxed text-stone-800">100%. I led my first session last weekend. 14 people. The feedback was unreal. I feel like I finally understand WHY it works, not just how to do it.</div></div>
+                </div>
+                <div class="px-5 pb-3 pt-1 border-t border-stone-200"><p class="text-xs text-stone-400 text-center">Shared with permission</p></div>
+            </div>
+
+            <div class="bg-white p-8 rounded-sm border border-stone-200 shadow-sm flex flex-col">
+                <div class="flex items-center gap-1 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-sage-600 fill-current"></i>
+                </div>
+                <p class="text-stone-700 leading-relaxed mb-6 italic flex-1">"I've taught pranayama for 10 years. The Advanced Pranayama module still contained material I had never encountered. The way Rod traces these techniques back to primary sources changes how you hold the whole practice."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-stone-300 rounded-full overflow-hidden flex-shrink-0"><img src="https://static.photos/people/200x200/41" alt="James Whitfield" class="w-full h-full object-cover grayscale"></div>
+                    <div><p class="font-medium text-stone-800 text-sm">James Whitfield</p><p class="text-xs text-stone-500">E-RYT 500 · London, UK</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOR / NOT FOR -->
+<section class="py-20 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 fade-in-section">
+            <div class="p-8 bg-sage-50 border border-sage-100 rounded-sm">
+                <div class="flex items-center gap-3 mb-6"><i data-lucide="check" class="w-6 h-6 text-sage-700"></i><h3 class="font-serif text-2xl text-stone-800">These Modules Are For</h3></div>
+                <ul class="space-y-4 text-stone-700">
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Registered yoga teachers seeking quality CEU hours in a specific discipline</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Experienced practitioners who want to master one area before broadening</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Teachers looking to expand their studio offerings (Nidra, pranayama, meditation)</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Anyone not ready for a full 300-hour commitment — but ready for genuine depth</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-sage-600 rounded-full mt-2 flex-shrink-0"></span><span>Serious practitioners who want Rod Stryker's lineage in a focused format</span></li>
+                </ul>
+            </div>
+            <div class="p-8 bg-stone-100 border border-stone-200 rounded-sm">
+                <div class="flex items-center gap-3 mb-6"><i data-lucide="x" class="w-6 h-6 text-stone-500"></i><h3 class="font-serif text-2xl text-stone-800">These Modules Are Not For</h3></div>
+                <ul class="space-y-4 text-stone-600">
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Complete beginners without an existing yoga practice or foundational training</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>Those looking for passive video content with no engagement or reflection</span></li>
+                    <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-stone-400 rounded-full mt-2 flex-shrink-0"></span><span>People who want to log hours quickly without integration or application</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Rod -->
+<section class="py-20 bg-stone-800 text-stone-100" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center fade-in-section">
+            <div><img src="https://static.photos/people/640x800/33" alt="Rod Stryker Portrait" class="w-full rounded-sm opacity-90 grayscale"></div>
+            <div>
+                <p class="text-sage-300 text-sm tracking-widest uppercase mb-4 font-medium">Your Teacher</p>
+                <h2 class="font-serif text-3xl md:text-4xl mb-6">Rod Stryker</h2>
+                <p class="text-stone-300 text-lg leading-relaxed mb-6">Founder of Tantra Yoga Alchemy, Rod is one of the preeminent yoga and meditation teachers in the United States. He has spent more than four decades practicing and teaching, studying directly with master teachers in the Himalayas and India.</p>
+                <p class="text-stone-300 leading-relaxed mb-6">As a founding member of the Yoga Alliance Standards Committee, Rod helped establish the criteria for what constitutes rigorous teacher training. He is the author of <em>The Four Desires</em> and has trained thousands of teachers worldwide.</p>
+                <p class="text-stone-300 leading-relaxed mb-8">Each of these modules represents a distinct pillar of his life's work — made available individually so any teacher can access the depth they need, when they need it.</p>
+                <div class="grid grid-cols-3 gap-6 border-t border-stone-700 pt-8">
+                    <div><p class="font-serif text-3xl text-sage-300">40+</p><p class="text-sm text-stone-400 mt-1">Years Teaching</p></div>
+                    <div><p class="font-serif text-3xl text-sage-300">10k+</p><p class="text-sm text-stone-400 mt-1">Teachers Trained</p></div>
+                    <div><p class="font-serif text-3xl text-sage-300">5</p><p class="text-sm text-stone-400 mt-1">Books Published</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Preview -->
+<section class="py-20 bg-sage-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm"><i data-lucide="play-circle" class="w-8 h-8 text-sage-700"></i></div>
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-4">Experience the Teaching Before You Commit</h2>
+        <p class="text-lg text-stone-600 leading-relaxed mb-8">Watch a free sample lecture from Module 5: <em>Advanced Sequencing & Vinyasa Krama</em> — one of the most sought-after topics in professional development.</p>
+        <div class="bg-white p-2 rounded-sm shadow-sm max-w-2xl mx-auto mb-8">
+            <div class="aspect-video bg-stone-200 rounded-sm flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                <img src="https://static.photos/minimal/1024x576/33" alt="Sample Lecture Preview" class="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"><i data-lucide="play" class="w-8 h-8 text-stone-800 ml-1"></i></div>
+                </div>
+            </div>
+        </div>
+        <p class="text-sm text-stone-500">30-minute lecture sample • Includes downloadable notes</p>
+    </div>
+</section>
+
+<!-- PRIMARY LEAD MAGNET -->
+<section class="py-24 bg-white border-t border-stone-200" id="find-your-module">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
+        <p class="text-sage-700 text-sm tracking-widest uppercase mb-4 font-medium">Find Your Module</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-stone-800 mb-6">Get the Free Module Guide<br>& a Sample Lecture</h2>
+        <p class="text-lg text-stone-600 leading-relaxed mb-12 max-w-2xl mx-auto">Receive a complete overview of all eight modules — including content breakdowns, CEU details, and a full sample lecture — so you can choose the right one with confidence.</p>
+        <div class="bg-stone-50 p-8 md:p-12 rounded-sm border border-stone-200 max-w-2xl mx-auto text-left">
+            <form id="main-lead-form" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-2">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 focus:ring-1 focus:ring-sage-500 text-stone-700" placeholder="your@email.com">
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">First Name</label>
+                        <input type="text" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700" placeholder="First name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">Last Name</label>
+                        <input type="text" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 text-stone-700" placeholder="Last name">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-stone-700 mb-2">Which module interests you most?</label>
+                    <select class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-sage-500 bg-white text-stone-700 text-sm">
+                        <option value="" disabled selected>Select a topic</option>
+                        <option>Module 1 — The Subtle Body & Energetics</option>
+                        <option>Module 2 — Advanced Pranayama</option>
+                        <option>Module 3 — Meditation & the Science of Mind</option>
+                        <option>Module 4 — Philosophy in Practice</option>
+                        <option>Module 5 — Advanced Sequencing & Vinyasa Krama</option>
+                        <option>Module 6 — The Art of Teaching</option>
+                        <option>Module 7 — Yoga Nidra</option>
+                        <option>Module 8 — Tantra & the Himalayan Tradition</option>
+                        <option>Not sure yet — send me the full guide</option>
+                    </select>
+                </div>
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-stone-800 text-white py-4 text-base tracking-wide hover:bg-stone-700 transition-colors rounded-sm shadow-sm">Send Me the Free Module Guide</button>
+                </div>
+                <p class="text-xs text-stone-500 text-center">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+            <div class="mt-8 pt-8 border-t border-stone-200 grid grid-cols-3 gap-4 text-center">
+                <div><i data-lucide="file-text" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i><p class="text-xs text-stone-600">All 8 Module Overviews</p></div>
+                <div><i data-lucide="video" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i><p class="text-xs text-stone-600">30-min Sample Lecture</p></div>
+                <div><i data-lucide="award" class="w-5 h-5 text-sage-600 mx-auto mb-2"></i><p class="text-xs text-stone-600">CEU Credit Details</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-800 mb-12 text-center">Common Questions</h2>
+        <div class="space-y-4">
+            <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                <button class="flex justify-between items-center w-full text-left accordion-btn"><span class="font-serif text-xl text-stone-800">Do I need to take modules in order?</span><i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i></button>
+                <div class="accordion-content mt-4 text-stone-600 leading-relaxed"><p>No. Each module is designed as a standalone course — you can begin with any topic that interests you. If you later decide to pursue the full 300-hour certification, all modules you've completed will count toward that credential.</p></div>
+            </div>
+            <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                <button class="flex justify-between items-center w-full text-left accordion-btn"><span class="font-serif text-xl text-stone-800">How exactly do CEU credits work?</span><i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i></button>
+                <div class="accordion-content mt-4 text-stone-600 leading-relaxed"><p>Each 40-hour module is eligible for 40 continuing education units (CEUs) with Yoga Alliance. Upon completing your module — including all required reflections and practicums — you will receive documentation to submit to Yoga Alliance for your CEU record. Yoga Alliance requires 45 hours every three years, so one module nearly fulfills the entire requirement.</p></div>
+            </div>
+            <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                <button class="flex justify-between items-center w-full text-left accordion-btn"><span class="font-serif text-xl text-stone-800">How long does it take to complete one module?</span><i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i></button>
+                <div class="accordion-content mt-4 text-stone-600 leading-relaxed"><p>Most teachers complete a single module in 8–12 weeks at a pace of approximately 4–6 hours per week. The course is fully self-paced — there are no fixed deadlines — so you can move faster or slower depending on your schedule and depth of engagement.</p></div>
+            </div>
+            <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                <button class="flex justify-between items-center w-full text-left accordion-btn"><span class="font-serif text-xl text-stone-800">Can individual modules be applied toward the 300-hour certification?</span><i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i></button>
+                <div class="accordion-content mt-4 text-stone-600 leading-relaxed"><p>Yes. Every module is a component of the full Tantra Yoga Alchemy 300-Hour Training. If you complete individual modules and later decide you want the full credential, you will receive full credit for each completed module and only need to complete the remaining ones. There is no penalty for starting with individual modules.</p></div>
+            </div>
+            <div class="border border-stone-200 rounded-sm p-6 hover:border-sage-300 transition-colors bg-white">
+                <button class="flex justify-between items-center w-full text-left accordion-btn"><span class="font-serif text-xl text-stone-800">Do I need a 200-hour certification to enroll?</span><i data-lucide="plus" class="w-5 h-5 text-stone-500 flex-shrink-0 accordion-icon"></i></button>
+                <div class="accordion-content mt-4 text-stone-600 leading-relaxed"><p>For most modules, a 200-hour certification or equivalent training is recommended, as the content assumes foundational knowledge of asana, Sanskrit terminology, and basic philosophy. Some modules — particularly Yoga Nidra and Philosophy in Practice — are accessible to serious practitioners without formal certification. Contact us if you're unsure and we'll help you determine fit.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-24 bg-stone-800 text-stone-100">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="text-center mb-10">
+            <h2 class="font-serif text-3xl md:text-4xl mb-4">Start With the Module That Calls to You</h2>
+            <p class="text-stone-300 text-lg leading-relaxed">Get the free module guide, compare your options, and receive a full sample lecture before you decide. No obligation.</p>
+        </div>
+        <div class="bg-stone-700/50 border border-stone-600 p-8 rounded-sm">
+            <form id="footer-lead-form" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium text-stone-300 mb-2">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-100 placeholder-stone-500" placeholder="your@email.com">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-300 mb-2">First Name</label>
+                        <input type="text" required class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-100 placeholder-stone-500" placeholder="First name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-300 mb-2">Last Name</label>
+                        <input type="text" required class="w-full px-4 py-3 bg-stone-900/60 border border-stone-600 rounded-sm focus:outline-none focus:border-sage-400 text-stone-100 placeholder-stone-500" placeholder="Last name">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-sage-300 text-stone-900 py-4 text-base tracking-wide hover:bg-white transition-colors rounded-sm font-medium mt-2">Send Me the Free Module Guide</button>
+                <p class="text-xs text-stone-500 text-center">No obligation. Instant delivery.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="col-span-2">
+                <span class="font-serif text-2xl text-stone-200 tracking-wide block mb-4">Rod Stryker</span>
+                <p class="text-sm leading-relaxed max-w-sm">World-class yoga and meditation education for serious practitioners. Rooted in the Himalayan tradition. Available one module at a time.</p>
+            </div>
+            <div>
+                <h4 class="text-stone-200 font-medium mb-4 text-sm tracking-widest uppercase">Modules</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#modules" class="hover:text-stone-200 transition-colors">All Modules</a></li>
+                    <li><a href="#ceu" class="hover:text-stone-200 transition-colors">CEU Information</a></li>
+                    <li><a href="/index.html" target="_blank" class="hover:text-stone-200 transition-colors">300-HR Certification</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-stone-200 font-medium mb-4 text-sm tracking-widest uppercase">Support</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#find-your-module" class="hover:text-stone-200 transition-colors">Find Your Module</a></li>
+                    <li><a href="#" class="hover:text-stone-200 transition-colors">Contact</a></li>
+                    <li><a href="#" class="hover:text-stone-200 transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs">© 2025 Rod Stryker / Tantra Yoga Alchemy. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-stone-200 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.accordion-icon');
+            const isOpen = content.classList.contains('open');
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.accordion-icon').forEach(i => i.setAttribute('data-lucide', 'plus'));
+            lucide.createIcons();
+            if (!isOpen) { content.classList.add('open'); icon.setAttribute('data-lucide', 'minus'); lucide.createIcons(); }
+        });
+    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
+    ['hero-form','main-lead-form','footer-lead-form'].forEach(id => {
+        const f = document.getElementById(id);
+        if (f) f.addEventListener('submit', e => { e.preventDefault(); alert('Thank you! Check your email for the free module guide and sample lecture.'); });
+    });
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('shadow-sm', window.pageYOffset > 100);
+    });
+</script>
+</body>
+</html>
